@@ -19,7 +19,14 @@ git clone https://github.com/septian59/laravel-api-jwt-auth.git
 cd laravel-api-jwt-auth
 composer install
 ```
-2. **Edit dan tambahkan di baris ``.env``**
+2. **Rename atau Coppy ``.env.example`` ke ``.env``**
+
+3. **Jalankan perintah**
+```bash
+php artisan key:generate
+```
+
+4. **Edit dan tambahkan di baris ``.env``**
 ```
 DB_PORT=3306
 DB_DATABASE=<YOUR DATABASE NAME>
@@ -27,19 +34,22 @@ DB_USERNAME=<YOUR DATABASE USERNAME>
 DB_PASSWORD=<YOUR DATABASE PASSWORD>
 
 JWT_TTL=99999 //tambahkan baris ini
-JWT_SECRET=lLekEcoKim4jrfge8jU5XtKX9k9A9LQz9XzsvMmGJt0ltIahvCRGJVBjDdcGkJeA //tambahkan baris ini
+
 ```
-3. **Lakukan Migrate setelah membuat database**
+
+5. **Jalankan perintah ``php artisan jwt:secret`` untuk menambahkan otomatis di baris ``jwt_secret`` di ``.env``**
+
+6. **Lakukan Migrate setelah membuat database**
 ```bash
 php artisan migrate
 ```
 
-4. **Running server**
+7. **Running server**
 ```bash
 php artisan serve
 ```
 
-5. **Lalu test di postman**
+8. **Lalu test di postman**
 -------
 
 
